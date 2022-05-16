@@ -9,12 +9,12 @@ then n=20
 	length=`expr length "$line"`
 	while [ $length -ge 40 ]
 	do
-		echo -n "`echo $line | cut -c $start-$end`\\"
+		echo -n "`echo $line | cut -c $start-$end`/"
 		length=`expr $length - $end`
 		start=`expr $end + 1`
 	end=`expr $end + 40`
 done
-echo -n "`echo $line | cut -c $start-`\\"
+echo -n "`echo $line | cut -c $start-`"
 echo " "
 done < $filename
 else
